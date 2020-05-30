@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "tenseflower",
+  "private_key_id": "dcaa2a0071044e8d502fe47d7a10b942915c639e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC01Y/jT6WbZYo9\nfMsqPP0PdZgjHgjVNi6Cpjzd2f4NcJZb91NKUvHlgAzeU/kMCuyfYZNHunYNimuz\niNN3ymtXtD7+Ko88U+pC1i97CLbheumXqI6laqz1stdm/LCBKHpA+TSKL58S7ymw\nvx5UzFP6wlv4/bfYBi7+iJyvdXY76eloqQ6CxOTRwWKLwrjt8oK1Z1I1H/zGF+px\nWhJlxlgXSHQtogW+271JALhqvZYnKqHy/wv0QMXi4Fpj6CkFpz6jzdgFRvLrBbD2\nmZlffa8p0zt1sp04jMwEFYip4VCQS6t0w+/m++N0X8M4T+nnOXOc36YFgu5G+nn1\nhyQR2e/vAgMBAAECggEAKtVhSUsO46GoHotmRkF/Ab/tgvf0yKgWWT0OMtCVdFKE\nUxFg6bx+7skngywp1DfsN45xx+47U1bDzxlsWbYZOgOIXkTve6820JESWxbD1uH5\n3cH/09/SSzqK+iqFlnpjhutgjhDcoawD2IlUomppw/5wsahLeUBxtjnev1LX6DXH\nLXQmOzXLdiU8ZVjJViRlgpkzAFRTeKvoFQSXUzZw2FdvWgml9dO+RZT1NzxbE27i\n1L9GJRpxKhzIpCfFQJ6mzsCCq0ukrpfVF34Mvgo2R9dGeU6075FOdVG56V+mTs78\nDO/3DxDIPeAqHE90VT1Kbksr9m5mLqvUcD4Ai8zFqQKBgQD8FI5XjYJSSkW5A7hP\n3U76Ox+o9Hej8EmsHpoSntvBPX9UJ6f2bxef3qEQYs9Tl0OJuz9xDMfMdp1Sf1IT\nZRIEEkDnXTavlsAG697QWWRaN25M2DrURHhAaBe6YpsWeylzrT34243NpmBp5AKk\napTOVYmbYKuCYMk/tF6ApCVXyQKBgQC3pWZ0k0ksm1fmifmxkcTLD4eHleDbba7E\nFYHhMHBOfcKy2CPEEjv8vcHbKrFcg670VtDl14YyHlV40z0y5p00FLUdHqmdRrEC\nmiaPI3QzbYICTdy9WO+c8H9GF9Hx6OqHmQSgC5KkFErcrnloVnKZuai9h5rhdHxb\n/GZklYjV9wKBgCwz3pHzunp7k6ZRxKwcfpDadT7HP4N7yy9nXlUNjjNgeUdkfMt1\nx4q9GzkoWnqp96nbL9C/EPoFgqjIsre77WDRYpgvfDtmD94m1jdqtXIsbicDc61t\nJDkHB8IjMFbM2gPyyP8uYLtDBX0MAnqaReW4khyw4uJF3oRROJEON44hAoGATt4A\ndxX9ueNox3//tKuGWTJtIORT8chT4q/d3EjCImNN5yJ9kanHC06u3yGhk7qVuydB\nhUOexQ1T5ZTKVn7FimVONphBfWKriBONdbFjKObhi33Gy6ZTGRILhp2aMwq1FdC4\nNMdjjYWNdOKVDyL5Cl26QtLmx+YPti1aB95UKpcCgYAaiWtrqhAv81CZBpwkdVFz\nD/m3S8/24Shub7CJTxRUD0KBXD/i/f9fhR0cTnCts8x3a9PnHum3HN6xfHF3CrT/\nLytJMW31jOkeSnTUuPMV4lRLDK+BEoq9pIZtHznNPmeSONF6Q8kceAROLWKqMDAy\n7Vx+LVnf3IcrhllDYEUJMw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "textspeech@tenseflower.iam.gserviceaccount.com",
+  "client_id": "101050886943735931160",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/textspeech%40tenseflower.iam.gserviceaccount.com"
+}
