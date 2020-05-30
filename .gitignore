@@ -3,4 +3,5 @@ venv/
 *.pyc
 *.mp4
 *.xml
+*.sqlite3
 media/
