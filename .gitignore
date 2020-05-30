@@ -1,2 +1,4 @@
 
 *.pyc
+studentvt/__pycache__/urls.cpython-38.pyc
+studentvt/__pycache__/settings.cpython-38.pyc
