@@ -2,3 +2,4 @@ venv/
 *.pyc
 *.pyc
 *.mp4
+media/
