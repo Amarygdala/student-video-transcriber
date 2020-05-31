@@ -67,13 +67,11 @@ def index(request):
                 for word_info in alternative.words:
                     word = word_info.word
                     start_time = word_info.start_time
-                    end_time = word_info.end_time
-                    segment += ('Word: {}, start_time: {}, end_time: {}'.format(
+                    segment += ('Word: {}, start_time: {}'.format(
                         word,
-                        start_time.seconds + start_time.nanos * 1e-9,
-                        end_time.seconds + end_time.nanos * 1e-9))
+                        start_time.seconds + start_time.nanos * 1e-9))
 
-                text += segment + "\n"
+                text += segment + "\n\n"
                 segment = ''
 
             return render(request, './studentvt/index.html', {
