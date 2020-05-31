@@ -69,7 +69,7 @@ def index(request):
             videofile = Video.objects.filter().order_by('-id')[0]
             videopath = str(videofile.videofile)
             audio = AudioSegment.from_file("./media/"+videopath,"mp4")
-            audio.export("./media/videos/output.wav", format="wav")
+            audio.export("./media/videos/"+str(videofile.name), format="wav")
             return render(request, './studentvt/index.html', {
                 'form': VideoForm(),
                 'video': videofile
