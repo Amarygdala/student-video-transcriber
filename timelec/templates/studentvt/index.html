@@ -50,21 +50,18 @@
   <header class="bg-primary text-white">
     <div class="container text-center">
       <h1>Transcribe Your Lecture</h1>
-      
-      {{text}}
+    
       <form enctype="multipart/form-data" method="POST" action="">
       {% csrf_token %}
-      <input type="text" placeholder='unique file id'><br>
-      <input type="file" value="file"><br>
+      {{form}}
       <input type="submit" value="Upload"/>
       </form>
-      {{video.videofile}}
       <video id="video" width="500" controls>
         <source src='{{ MEDIA_URL }}{{video.videofile}}' type='video/mp4'>
         Your browser does not support the video tag.
       </video><br>
       <button onclick="time()">dddd</button>
-      <h6>*demo version: please keep files under a minute. mp4 files only.</h6>
+      <h6>*demo version: please keep files under a minute. less than 10 mb. mp4 files only.</h6>
     </div>
   </header>
 
