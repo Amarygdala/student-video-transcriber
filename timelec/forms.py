@@ -6,3 +6,7 @@ class VideoForm(forms.ModelForm):
     class Meta:
         model = Video
         fields = ["name", "videofile"]
+        labels = {
+            "name": "Random Unique ID",
+            "videofile":""
+        }
