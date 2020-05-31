@@ -4,11 +4,13 @@ from .forms import VideoForm
 
 import argparse
 import io
+import os
+
 from pydub import AudioSegment
 from google.oauth2 import service_account
 from boto.s3.connection import S3Connection
-s3 = S3Connection(os.environ['S3_KEY'], os.environ['S3_SECRET'])
-credentials = service_account.Credentials.from_service_account_file(GOOGLE_API_KEY)
+
+credentials = service_account.Credentials.from_service_account_file('api-key.json')
 
 
 def index(request):
@@ -31,12 +33,15 @@ def index(request):
             videofile = Video.objects.filter().order_by('-id')[0]
             videopath = str(videofile.videofile)
             audio = AudioSegment.from_file("./media/" + videopath, "mp4")
-            audio = audio.set_channels(1)
             audio.export("./media/videos/" + str(videofile.name) + ".flac", format="flac")
             # convert audio to text here
 
+            audio = AudioSegment.from_file("./media/videos/" + str(videofile.name), "flac")
+            audio = audio.set_channels(1)
+            audio.export("./media/videos/" + 'mono_' + str(videofile.name) + ".flac", format="flac")
+
             # convert audio to text here
-            with io.open("./media/videos/" + str(videofile.name) + ".flac", 'rb') as audio_file:
+            with io.open("./media/videos/" + 'mono_' + str(videofile.name) + ".flac", 'rb') as audio_file:
                 content = audio_file.read()
 
             print("audio file read")
