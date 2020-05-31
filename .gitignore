@@ -1,8 +1,6 @@
 venv/
 *.pyc
 *.pyc
-*.mp4
 *.xml
 *.sqlite3
-media/
 db.sqlite3

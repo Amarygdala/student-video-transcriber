@@ -4,8 +4,7 @@ from .forms import VideoForm
 
 import argparse
 import io
-import moviepy.editor as mp 
-
+from pydub import AudioSegment
 from google.oauth2 import service_account
 
 credentials = service_account.Credentials.from_service_account_file('api-key.json')
@@ -69,8 +68,8 @@ def index(request):
             form.save()
             videofile = Video.objects.filter().order_by('-id')[0]
             videopath = str(videofile.videofile)
-            clip = mp.VideoFileClip("./media/"+videopath)
-            clip.audio.write_audiofile("./media/"+videopath)  
+            audio = AudioSegment.from_file("./media/"+videopath,"mp4")
+            audio.export("./media/videos/output.wav", format="wav")
             return render(request, './studentvt/index.html', {
                 'form': VideoForm(),
                 'video': videofile
