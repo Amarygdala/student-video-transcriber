@@ -58,22 +58,25 @@ def index(request):
             print("Recognized")
 
             transcript = open("./media/videos/" + 'mono_' + str(videofile.name) + '.txt', 'a')
-            text = ""
-            segment = ''
+            text = [['/start/', 0],]
+            x = 0
             for result in response.results:
                 alternative = result.alternatives[0]
                 transcript.write(alternative.transcript + '\n')
                 segment = ('Transcript: {}'.format(alternative.transcript))
 
                 for word_info in alternative.words:
+                    x+=1
                     word = word_info.word
                     start_time = word_info.start_time
+
+                    text.insert(x, [word, start_time])
                     segment += (' {}, {}'.format(
                         word,
                         start_time.seconds + start_time.nanos * 1e-9))
 
                 text += segment + "<br>"
-                segment = ''
+
 
 
             transcript.close
