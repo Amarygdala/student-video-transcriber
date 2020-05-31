@@ -53,14 +53,13 @@
     
       <form enctype="multipart/form-data" method="POST" action="">
       {% csrf_token %}
-      {{form}}
+      {{form}}<br>
       <input type="submit" value="Upload"/>
       </form>
       <video id="video" width="500" controls>
         <source src='{{ MEDIA_URL }}{{video.videofile}}' type='video/mp4'>
         Your browser does not support the video tag.
       </video><br>
-      <button onclick="time()">dddd</button>
       <h6>*demo version: please keep files under a minute. less than 10 mb. mp4 files only.</h6>
     </div>
   </header>
@@ -70,11 +69,14 @@
       <div class="row">
         <div class="list-inline mx-auto justify-content-center">
           <h2>Results</h2>
-          <p class="lead">{{text}}</p>
+          <p class="lead">{{transcript}}</p>
           <ul style="overflow-y: scroll;height: 500px;width: 500px;">
-            <li>Clickable nav links that smooth scroll to page sections</li>
-
+            {% for x in text %}
+              <li>{{x}}</li>
+            {% endfor %}
           </ul>
+            <input type="number" placeholder="Jump To Time" id="query">
+            <button type="button" onclick="time();">GO</button>
         </div>
       </div>
     </div>
@@ -121,8 +123,9 @@
   <script src="{% static '/js/scrolling-nav.js'%}"></script>
   <script>
     function time(){
-        var vid = document.getElementById("video");
-        vid.currentTime = 5;
+      var inputVal = document.getElementById("query").value;
+      var vid = document.getElementById("video");
+      vid.currentTime = inputVal;
     }
     </script>
 </body>
