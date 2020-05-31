@@ -1,0 +1,1 @@
+web: gunicorn studentvt.wsgi --log-file -

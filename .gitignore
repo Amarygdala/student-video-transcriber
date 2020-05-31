@@ -5,3 +5,4 @@ venv/
 *.xml
 *.sqlite3
 media/
+db.sqlite3
