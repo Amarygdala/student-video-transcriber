@@ -57,10 +57,12 @@ def index(request):
             response = client.recognize(config, audio)
             print("Recognized")
 
+            transcript = open("./media/videos/" + 'mono_' + str(videofile.name) + '.txt', 'a')
             text = ""
             segment = ''
             for result in response.results:
                 alternative = result.alternatives[0]
+                transcript.write(alternative.transcript + '\n')
                 segment = ('Transcript: {}'.format(alternative.transcript))
 
                 for word_info in alternative.words:
@@ -72,6 +74,9 @@ def index(request):
 
                 text += segment + "<br>"
                 segment = ''
+
+
+            transcript.close
 
             return render(request, './studentvt/index.html', {
                 'form': VideoForm(),
