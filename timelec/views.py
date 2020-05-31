@@ -73,8 +73,8 @@ def index(request):
                         start_time.seconds + start_time.nanos * 1e-9,
                         end_time.seconds + end_time.nanos * 1e-9))
 
-            text += segment + "\n"
-            segment = ''
+                text += segment + "\n"
+                segment = ''
 
             return render(request, './studentvt/index.html', {
                 'form': VideoForm(),
