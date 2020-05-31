@@ -8,7 +8,6 @@ import os
 
 from pydub import AudioSegment
 from google.oauth2 import service_account
-from boto.s3.connection import S3Connection
 
 credentials = service_account.Credentials.from_service_account_file('api-key.json')
 
@@ -36,7 +35,7 @@ def index(request):
             audio.export("./media/videos/" + str(videofile.name) + ".flac", format="flac")
             # convert audio to text here
 
-            audio = AudioSegment.from_file("./media/videos/" + str(videofile.name), "flac")
+            audio = AudioSegment.from_file("./media/videos/" + str(videofile.name)+".flac", "flac")
             audio = audio.set_channels(1)
             audio.export("./media/videos/" + 'mono_' + str(videofile.name) + ".flac", format="flac")
 
@@ -71,7 +70,7 @@ def index(request):
                         word,
                         start_time.seconds + start_time.nanos * 1e-9,
                         end_time.seconds + end_time.nanos * 1e-9))
-
+            text+="finished"
             return render(request, './studentvt/index.html', {
                 'form': VideoForm(),
                 'video': videofile,
