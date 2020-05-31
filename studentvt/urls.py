@@ -8,5 +8,4 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('convert/', views.transcribe_file_with_word_time_offsets, name="convert")
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
