@@ -4,6 +4,7 @@ from .forms import VideoForm
 
 import argparse
 import io
+import moviepy.editor as mp 
 
 from google.oauth2 import service_account
 
@@ -67,6 +68,9 @@ def index(request):
         if form.is_valid():
             form.save()
             videofile = Video.objects.filter().order_by('-id')[0]
+            videopath = str(videofile.videofile)
+            clip = mp.VideoFileClip("./media/"+videopath)
+            clip.audio.write_audiofile("./media/"+videopath)  
             return render(request, './studentvt/index.html', {
                 'form': VideoForm(),
                 'video': videofile

@@ -4,7 +4,10 @@ bson==0.5.8
 cachetools==4.1.0
 certifi==2020.4.5.1
 chardet==3.0.4
+click==7.1.2
+colorama==0.4.3
 dataclasses==0.6
+decorator==4.4.2
 distlib==0.3.0
 dj-database-url==0.5.0
 Django==3.0.6
@@ -20,12 +23,16 @@ grpcio==1.29.0
 gunicorn==20.0.4
 httplib2==0.18.1
 idna==2.9
+imageio==2.8.0
+imageio-ffmpeg==0.4.2
+moviepy==1.0.3
+numpy==1.18.4
 Pillow==7.1.2
+proglog==0.1.9
 protobuf==3.12.2
 psycopg2==2.8.5
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-pydub==0.24.0
 pymongo==3.10.1
 python-dateutil==2.8.1
 pytz==2020.1
@@ -33,6 +40,7 @@ requests==2.23.0
 rsa==4.0
 six==1.14.0
 sqlparse==0.2.4
+tqdm==4.46.0
 uritemplate==3.0.1
 urllib3==1.25.9
 virtualenv==20.0.20
