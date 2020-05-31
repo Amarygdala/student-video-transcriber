@@ -13,10 +13,10 @@
 </form>
 {{video.videofile}}
 <br><br>
-<audio controls>
-    <source src='{{ MEDIA_URL }}{{video.name}}' type='audio/wav'>
+<video width="500" controls>
+    <source src='{{ MEDIA_URL }}{{video.videofile}}' type='video/mp4'>
 Your browser does not support the video tag.
-    </audio>
+    </video>
 <br><br>
 </p>
 
