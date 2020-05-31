@@ -13,12 +13,18 @@
 </form>
 {{video.videofile}}
 <br><br>
-<video width="500" controls>
+<video id="video" width="500" controls>
     <source src='{{ MEDIA_URL }}{{video.videofile}}' type='video/mp4'>
 Your browser does not support the video tag.
     </video>
 <br><br>
 </p>
-
+<button onclick="time()">dddd</button>
 </body>
-
+<script>
+function time(){
+    var vid = document.getElementById("video");
+    vid.currentTime = 5;
+}
+</script>
+</html>
