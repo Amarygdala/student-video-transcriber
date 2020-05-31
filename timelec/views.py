@@ -7,7 +7,7 @@ import io
 from pydub import AudioSegment
 from google.oauth2 import service_account
 
-credentials = service_account.Credentials.from_service_account_file('api-key.json')
+credentials = service_account.Credentials.from_service_account_file(GOOGLE_API_KEY)
 
 
 def transcribe_file_with_word_time_offsets(request):
